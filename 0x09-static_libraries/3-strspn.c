@@ -7,6 +7,5 @@
  **/
 unsigned int _strspn(char *s, char *accept)
 {
-  unsigned int b = 0;
-  int i, j;
-  for (i = 0; accept
+  return (0);
+}

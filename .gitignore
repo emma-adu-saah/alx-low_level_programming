@@ -2,3 +2,4 @@
 main*
 !main.h
 *.out
+*.o
