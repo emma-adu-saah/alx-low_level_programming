@@ -13,10 +13,10 @@ unsigned int i;
 int num;
 va_list args;
 va_start(args, n);
-for (i = 0; i < n - 1; i++)
+for (i = 0; i < n; i++)
 {
 num = va_arg(args, int);
-if (separator == NULL)
+if (separator == NULL || i == n - 1)
 {
 printf("%d", num);
 }
@@ -25,6 +25,6 @@ else
 printf("%d%s", num, separator);
 }
 }
-printf("%d\n", va_arg(args, int));
+printf("\n");
 va_end(args);
 }
