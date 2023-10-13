@@ -18,11 +18,11 @@ for (i = 0; i < n - 1; i++)
 num = va_arg(args, int);
 if (separator == NULL)
 {
-printf("%u", num);
+printf("%d", num);
 }
 else
 {
-printf("%d%s ", num, separator);
+printf("%d%s", num, separator);
 }
 }
 printf("%d\n", va_arg(args, int));
