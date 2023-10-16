@@ -9,31 +9,25 @@
  **/
 int main(int argc, char **argv)
 {
-int total = 0;
-int num, i, j;
+int i, num, total = 0, j;
 if (argc < 2)
 {
-printf("%d\n", 0);
+printf("0\n");
+return (0);
 }
-else
-{
 for (i = 1; i < argc; i++)
 {
 for (j = 0; argv[i][j] != '\0'; j++)
 {
-if (!isalpha(argv[i][j]))
-{
-num = atoi(argv[i]);
-total += num;
-}
-else
+if (!isdigit(argv[i][j]))
 {
 printf("Error\n");
 return (1);
 }
 }
+num = atoi(argv[i]);
+total += num;
 }
 printf("%d\n", total);
-}
 return (0);
 }
