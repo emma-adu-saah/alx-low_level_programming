@@ -3,6 +3,7 @@
  *main - Prints the minimum number of coins to make change
  *@argc: Number of arguments
  *@argv: List of arguments passed
+ *Return: 0 on success
  **/
 int main(int argc, char **argv)
 {
@@ -23,7 +24,7 @@ num_coins = sizeof(coin_values) / sizeof(coin_values[0]);
 coin_count = 0;
 for (i = 0; i < num_coins; i++)
 {
-while(cents >= coin_values[i])
+while (cents >= coin_values[i])
 {
 cents -= coin_values[i];
 coin_count++;
