@@ -17,6 +17,5 @@ for (i = 0; str[i] != '\0'; i++)
 {
 new_str[i] = str[i];
 }
-free(new_str);
 return (new_str);
 }
