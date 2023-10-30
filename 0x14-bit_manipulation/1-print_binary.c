@@ -6,7 +6,8 @@
  **/
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 0;
+	unsigned long int j, i = 0;
+	char * binary = '0';
 
 	if (n == 0)
 	{
@@ -17,13 +18,17 @@ void print_binary(unsigned long int n)
 	{
 		if (n & 1)
 		{
-			_putchar('1');
+			binary = '1';
 		}
 		else
 		{
-			_putchar('0');
+			binary = '0';
 		}
 		n = n >> 1;
 		i++;
+	}
+	for (j = i - 1; j > 0; j--)
+	{
+		_putchar(binary[j]);
 	}
 }
