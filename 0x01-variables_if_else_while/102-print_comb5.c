@@ -1,30 +1,43 @@
 #include <stdio.h>
 /**
- *main - Prints all possible combinations of two two-digt numbers
- *Return: Return 0
- **/
+ * main - printcomp5
+ * Return: 0
+ */
 int main(void)
 {
-  int a, b, c, d;
-  for (a = 48; a <= 57; a++)
-    {
-      for (b = 48; b <= 57; b++)
+	int i, j, k, m;
+
+	i = 48;
+	while (i < 58)
 	{
-	  putchar(a);
-	  putchar(b);
-	  putchar(32);
-      for (c = 48; c <= 57; c++)
-	{
-	  for (d = c + 1; d <= 57; d++)
-	    {
-	      putchar(c);
-              putchar(d);
-	      putchar(44);
-	       }
-	    }
-        }
-    }
-  putchar('\n');
-  return (0);
+		j = 48;
+		while (j < 58)
+		{
+			m = j + 1;
+			k = i;
+			while (k < 58)
+			{
+				while (m < 58)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(32);
+					putchar(k);
+					putchar(m);
+					if (i < 57 || j < 56 || k < 57 || m < 57)
+					{
+						putchar(44);
+						putchar(32);
+					}
+					m++;
+				}
+				m = 48;
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar(10);
+	return (0);
 }
-      
