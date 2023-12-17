@@ -10,10 +10,10 @@ int main(void)
 
 	printf("%lu, %lu, ", a, b);
 
-	while (i <= 96)
+	while (i <= 82)
 	{
 		next = a + b;
-		if (i < 96)
+		if (i < 82)
 		{
 			printf("%lu, ", next);
 		}
