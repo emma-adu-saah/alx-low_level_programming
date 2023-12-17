@@ -8,7 +8,7 @@ int main(void)
 	int i = 0;
 	long int next = 0, a = 1, b = 2;
 
-	printf("%ld %ld ", a, b);
+	printf("%ld, %ld, ", a, b);
 	while (i <= 47)
 	{
 		next = a + b;
