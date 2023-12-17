@@ -9,14 +9,20 @@ int main(void)
 	long int next = 0, a = 1, b = 2;
 
 	printf("%ld %ld ", a, b);
-	while (i <= 50)
+	while (i <= 47)
 	{
 		next = a + b;
-		printf("%ld ", next);
+		if (i < 47)
+		{
+			printf("%ld, ", next);
+		}
+		else
+		{
+			printf("%ld\n", next);
+		}
 		a = b;
 		b = next;
-		++i;
+		i++;
 	}
-	printf("\n");
 	return (0);
 }
