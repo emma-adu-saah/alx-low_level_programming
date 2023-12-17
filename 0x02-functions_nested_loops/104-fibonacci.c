@@ -5,21 +5,21 @@
  **/
 int main(void)
 {
-	long int next = 0, a = 1, b = 2;
+	unsigned long int next = 0, a = 1, b = 2;
 	int i = 0;
 
-	printf("%ld, %ld, ", a, b);
+	printf("%lu, %lu, ", a, b);
 
 	while (i <= 96)
 	{
 		next = a + b;
 		if (i < 96)
 		{
-			printf("%ld, ", next);
+			printf("%lu, ", next);
 		}
 		else
 		{
-			printf("%ld\n", next);
+			printf("%lu\n", next);
 		}
 		a = b;
 		b = next;
