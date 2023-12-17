@@ -5,12 +5,12 @@
  **/
 int main(void)
 {
-	long int next = 0, sum = 0, a = 1, b = 2;
+	long int next = 0, sum = 0, a = 0, b = 1;
 
-	while (next < 4000000)
+	while (next <= 4000000)
 	{
 		next = a + b;
-		if (next % 2)
+		if (next % 2 == 0)
 		{
 			sum += next;
 		}
