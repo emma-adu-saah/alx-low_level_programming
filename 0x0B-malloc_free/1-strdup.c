@@ -18,6 +18,10 @@ for (i = 0; str[i] != '\0'; i++)
 j++;
 }
 new_str = malloc(sizeof(char)  * (j + 1));
+if (new_str == NULL)
+{
+	return (NULL);
+}
 for (i = 0; str[i] != '\0'; i++)
 {
 new_str[i] = str[i];
