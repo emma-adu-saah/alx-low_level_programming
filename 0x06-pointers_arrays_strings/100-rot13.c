@@ -10,13 +10,13 @@ char *rot13(char *string)
 
 	for (i = 0; string[i] != '\0'; i++)
 	{
-		if (string[i] > 77 || string[i] > 109)
+		if (string[i] > 78 || string[i] > 110)
 		{
-			string[i] = i + 13;
+			string[i] = string[i] + 13;
 		}
 		else
 		{
-			string[i] = i - 13;
+			string[i] = string[i] - 13;
 		}
 	}
 	return (string);
