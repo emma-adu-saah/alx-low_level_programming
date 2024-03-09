@@ -6,18 +6,36 @@
  **/
 char *rot13(char *string)
 {
-	int i;
-
-	for (i = 0; string[i] != '\0'; i++)
+    int i = 0, j;
+    char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+				'G', 'H', 'I', 'J', 'K', 'L',
+				'M', 'N', 'O', 'P', 'Q', 'R',
+				'S', 'T', 'U', 'V', 'W', 'X',
+				'Y', 'Z', 'a', 'b', 'c', 'd',
+				'e', 'f', 'g', 'h', 'i', 'j',
+				'k', 'l', 'm', 'n', 'o', 'p',
+				'q', 'r', 's', 't', 'u', 'v',
+				'w', 'x', 'y', 'z'};
+    char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+			    'T', 'U', 'V', 'W', 'X', 'Y',
+			    'Z', 'A', 'B', 'C', 'D', 'E',
+			    'F', 'G', 'H', 'I', 'J', 'K',
+			    'L', 'M', 'n', 'o', 'p', 'q',
+			    'r', 's', 't', 'u', 'v', 'w',
+			    'x', 'y', 'z', 'a', 'b', 'c',
+			    'd', 'e', 'f', 'g', 'h', 'i',
+			    'j', 'k', 'l', 'm'};
+    while (string[i])
+    {
+	for (j = 0; j < 52; j++)
 	{
-		if (string[i] > 78 || string[i] > 110)
-		{
-			string[i] = string[i] + 13;
-		}
-		else
-		{
-			string[i] = string[i] - 13;
-		}
+	    if (string[i] == alphabet[j])
+	    {
+	       string[i] = rot13key[j];
+	       break;
+	    }
 	}
-	return (string);
+	i++;
+    }
+    return (string);
 }
