@@ -8,13 +8,19 @@
  **/
 char *_strchr(char *s, char c)
 {
-int i;
-for (i = 0; s[i] != '\0'; i++)
-{
-if (s[i] == c)
-{
-return (&s[i]);
-}
-}
-return (NULL);
+	int i = 0;
+	char *ptr;
+
+	if (c == '\0')
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		if (c == s[i])
+		{
+			ptr = &s[i];
+			return (ptr);
+		}
+		i++;
+	}
+	return (NULL);
 }
